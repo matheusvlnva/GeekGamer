@@ -1,5 +1,5 @@
 @import url('cardapio.css');
-
+@import url('depoimentos.css');
 :root{
     --color-primary-1: #fff9ea;
     --color-primary-2: #ffe8b4;
@@ -11,22 +11,17 @@
     --color-neutra-1:#1d1d1d;
     --color-neutra-2:#fff;
 }
-
-
 *{
     text-decoration: none;
     list-style: none;
 }
-
 body{
     display: flex;
     flex-direction: column;
     margin: 0;
     box-sizing: border-box;
-    padding: 0;
-   
+    padding: 0;   
 }
-
 .btn-default{
     background-color: var(--color-primary-5);
     border: none;
@@ -92,4 +87,13 @@ body{
 .banner img{
     display: flex;
     margin: auto;
+}
+.section-title{
+    color: var(--color-primary-6);
+    font-size: 2rem;
+    text-align: center;
+}
+.section-subtitle{
+    text-align: center;
+    font-size: 2.1875rem;
 }
