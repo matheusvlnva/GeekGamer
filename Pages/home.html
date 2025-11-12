@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete Git</title>
+    <!-- fiz a adição do link do cdn no FA, mas não deu certo a importação do icone (linha 19)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/menu.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,33 +15,32 @@
 <body>
     <header>
         <nav id="navbar">
-            <i class="fa-solid fa-burger">food</i>
+            <!-- não consegui fazer a alteração do ícone abaixo.. -->
+            <i class="fa-light fa-glasses">Geek Gamer</i> 
             <ul id="nav_list">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Cardápio</a>
+                    <a href="" class="nav-link">Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Avaliações</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">Avaliações</a>
+                    <a href="" class="nav-link">Produtos</a>
                 </li>
                 <button class="btn-default">
-                    Peça Aqui
+                    Meu Carrinho
                 </button>
             </ul>
         </nav> 
         <button class="mobile-btn">
-            <i class="fa-solid fa-bars"></i>
-        </button> 
+            <!--não consegui fazer a imagem funcionar também, também tive dificuldade no css-->
+           <i class="fa-light fa-list-ul"></i>
+        </button>  
         <div class="mobile-menu">
             <ul class="mobile-nav-list">
                 <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#cardapio">Cardápio</a></li>
-                <li class="nav-item"><a href="#depoimentos">Avaliações</a></li>
+                <li class="nav-item"><a href="#cardapio">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#depoimentos">Produtos</a></li>
             </ul>
         </div>      
     </header>
