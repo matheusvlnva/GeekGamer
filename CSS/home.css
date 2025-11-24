@@ -11,7 +11,6 @@
 
 }
 *{
-    text-decoration: none;
     list-style: none;
 }
 body{
@@ -21,26 +20,6 @@ body{
     margin: 0;
     box-sizing: border-box;
     padding: 0;   
-    
-
-}
-.btn-default{
-    background-color: var(--color-primary-1);
-    border: none;
-    display: flex;
-    align-items: center;
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: var(--color-neutra-3);
-}
-.btn-default:hover{
-    background-color: var(--color-primary-2);
-    box-shadow: 0px 0px 10px 2px var(--color-primary-1);
-    transition: box-shadow 0.2s ease-in-out
 }
 .home{
     display: flex;
@@ -49,7 +28,6 @@ body{
 }
 .cta{
     width: 35%;
-    /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -60,12 +38,13 @@ body{
 .cta .title{
     font-size: 4rem;
     color: var(--color-neutra-1);
+    font-family: sans-serif;
 }
 .cta .title span{
     color: var(--color-primary-1);
-}
-.cta .descricao{
-    font-size: 1.2rem;
+    font-family:'Courier New';
+    font-size: 6rem;
+    font-style: bold;
 }
 .cta-buttons{
     display: flex;
@@ -74,23 +53,16 @@ body{
 .cta-buttons a{
     color: var(--color-neutra-1);
 }
-.phone-button{
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background-color: var(--color-neutra-2);
-    padding: 8px 14px;
-    font-weight: 500;
-    border-radius: 12px;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
-}
 .banner{
     display: flex;
     margin: auto;
 }
 .banner img{
-    display: flex;
+    display:initial;
     margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 40px;
 }
 .section-title{
     color: var(--color-primary-1);
