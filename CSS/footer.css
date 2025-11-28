@@ -1,5 +1,6 @@
 footer{
     background-color: var(--color-neutra-2);
+    width: 100%;
 }
 .footer-itens{
     display: flex;
@@ -8,7 +9,7 @@ footer{
     align-items: center;
 }
 .copyright{
-    color: var(--color-neutra-2);
+    color: var(--color-primary-1);
     font-weight: 500;
     font-size: 18px;
 }
