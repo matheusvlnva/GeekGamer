@@ -21,7 +21,7 @@
             global $pdo;
 
             //verificar se o produto já está cadastrado
-            $prodto = $pdo->prepare("SELECT id_produto FROM produtos WHERE nome = :e");
+            $produto = $pdo->prepare("SELECT id_produto FROM produtos WHERE nome = :e");
             $produto->bindValue(":n", $nome);
             $produto->execute();
             if($produto->rowCount() > 0)
