@@ -1,3 +1,15 @@
+<!-- Falta:
+ - tentar alinhar o box no centro e colocar os labels ao lado do campo de preenchimento
+ - fazer o botão para voltar para aárea de login .. -->
+
+
+
+
+
+
+
+
+
 <?php 
     require '../Classes/usuario.php';
     $usuario = new Usuario();
@@ -8,21 +20,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Login.css">
     <title>Cadastro Usuário</title>
 </head>
 <body>
-    <h2>CADASTRO DE USUÁRIO</h2>
-    <form method="post">
-        <input type="text" name="nome" placeholder="Digite seu nome."><br><br>
-        <input type="email" name="email" placeholder="Digite seu email"><br><br>
-        <input type="text" name="endereco" placeholder="Digite seu enedereço."><br><br>
-        <input type="text" name="cidade" placeholder="Digite a cidade onde você mora."><br><br>
-        <input type="text" name="estado" placeholder="Digite o estado onde você mora."><br><br>
-        <input type="tel" name="telefone" placeholder="Digite o número do seu telefone."><br><br>
-        <input type="password" name="senha" placeholder="Digite sua senha."><br><br>
-        <input type="password" name="Confsenha" placeholder="Confirme sua senha."><br><br>
-        <input type="submit" value="CADASTRAR"><br><br>
+    <a href="areadelogin.php" class="btn-return">Voltar</a>
+        <div class="log">
+            <h2>CADASTRO DE USUÁRIO</h2>
+            <form method="post">
+            
+            <label>Nome:</label><br>
+                <input type="text" name="nome" placeholder="Digite seu nome."><br><br>
+            <label>E-mail:</label><br>
+                <input type="email" name="email" placeholder="Digite seu email"><br><br>
+            <label>Endereço:</label><br>
+                <input type="text" name="endereco" placeholder="Digite seu endereço."><br><br>
+            <label>Cidade:</label><br>
+                <input type="text" name="cidade" placeholder="Digite sua cidade."><br><br>
+            <label>Estado:</label><br>
+                <input type="text" name="estado" placeholder="Digite seu estado."><br><br>
+            <label>Telefone:</label><br>
+                <input type="tel" name="telefone" placeholder="Digite seu telefone."><br><br>
+            <label>Senha:</label><br>
+                <input type="password" name="senha" placeholder="Digite sua senha."><br><br>
+            <label>Confirmação de senha:</label><br>
+                <input type="password" name="Confsenha" placeholder="Confirme sua senha."><br><br>
+        <button type="submit">CADASTRAR</button>
         <p>Já é cadastrado? Clique <a href="login.php">Aqui</a> para acessar.</p>
+         </div>
 
     </form>
     <?php 
@@ -40,7 +65,7 @@
             //Verificar se todos os campos estão preenchidos
             if(!empty($nome) && !empty($endereco) && !empty($cidade) && !empty($estado) && !empty($telefone) && !empty($email) && !empty($senha))
             {
-                $usuario->conectar("estacio2025","localhost", "root", "");
+                $usuario->conectar("estacio2025 (1)","localhost", "root", "");
                 if($usuario->msgErro == "")
                 {
                     echo "conectou";
@@ -83,7 +108,8 @@
             }
         }
 
-    ?>
+    ?>php
     
 </body>
 </html>
+    
