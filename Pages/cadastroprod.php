@@ -1,17 +1,6 @@
-<!-- Falta:
- - tentar alinhar o box no centro e colocar os labels ao lado do campo de preenchimento
-  .. -->
-
-
-
-
-
-
-
-
 
 <?php 
-    require '../Classes/produtos.php';
+    require '../Classes/produto.php';
     $produto = new Produto();
 ?>
 
@@ -24,7 +13,7 @@
     <title>Cadastro Produto</title>
 </head>
 <body>
-    <a href="areadelogin.php" class="btn-return">Voltar</a>
+    <a href="areausuario.php" class="btn-return">Voltar</a>
     <div class="log">
         <h2>CADASTRO DE PRODUTO</h2>
      <form method="post">
@@ -61,24 +50,38 @@
             //Verificar se todos os campos estão preenchidos
             if(!empty($nome) && !empty($valor) && !empty($quantidade) && !empty($codigo) && !empty($peso) && !empty($estmin) && !empty($estmax))
             {
-                $produtos->conectar("estacio2025 (1)","localhost", "root", "");
-                if($produtos->msgErro == "")
+                $produto->conectar("estacio2025","localhost", "root", "");
+                if($produto->msgErro == "")
                 {
                     echo "conectou";
-                    
+                    if($produto->cadastrarProduto($nome,$valor,$quantidade,$codigo,$peso,$estmin,$estmax)){
+                            ?>
+                                <div class="msg-sucesso">
+                                    <p>Produto Cadastrado com Sucesso.</p>
+                                </div>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                                <div class="msg-sucesso">
+                                    <p>Produto Já cadastrado.</p>
+                                </div>
+                            <?php
+                        }
                 }
                 else
                 {
                     ?>
                                 <div class="msg-sucesso">
-                                    <?php echo "Erro: ".$produtos->msgErro; ?>
+                                    <?php echo "Erro: ".$produto->msgErro; ?>
                                 </div>
                             <?php
                 }
             }
         }
 
-    ?>php
+    ?>
     
 </body>
 </html>

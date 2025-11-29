@@ -9,7 +9,7 @@
 </head>
 
 <body>  
-    <a href="home.html" class="btn-return">Sair</a>
+    <a href="home.php" class="btn-return">Sair</a>
     <div class="section-title">
         <h1>Área do Usuário</h1>
         <p>O que deseja fazer a seguir?</p>
@@ -30,7 +30,7 @@
             <h3>Cadastrar Novo Produto<h3>
             </div>
         </a>
-        <a href="../Pages/listarproduto.html" class="card-1">
+        <a href="../Pages/listarproduto.php" class="card-1">
             <div class="Descricao">
             <h3>Listar Produtos Cadastrados</h3>
             </div>

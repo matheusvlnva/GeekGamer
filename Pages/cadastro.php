@@ -1,14 +1,3 @@
-<!-- Falta:
- - tentar alinhar o box no centro e colocar os labels ao lado do campo de preenchimento
- - fazer o botão para voltar para aárea de login .. -->
-
-
-
-
-
-
-
-
 
 <?php 
     require '../Classes/usuario.php';
@@ -24,7 +13,7 @@
     <title>Cadastro Usuário</title>
 </head>
 <body>
-    <a href="areadelogin.php" class="btn-return">Voltar</a>
+    <a href="areausuario.php" class="btn-return">Voltar</a>
         <div class="log">
             <h2>CADASTRO DE USUÁRIO</h2>
             <form method="post">
@@ -45,9 +34,9 @@
                 <input type="password" name="senha" placeholder="Digite sua senha."><br><br>
             <label>Confirmação de senha:</label><br>
                 <input type="password" name="Confsenha" placeholder="Confirme sua senha."><br><br>
-        <button type="submit">CADASTRAR</button>
+        <button type="submit" >CADASTRAR</button><br><br>
+            <div>
         <p>Já é cadastrado? Clique <a href="login.php">Aqui</a> para acessar.</p>
-         </div>
 
     </form>
     <?php 
@@ -65,7 +54,7 @@
             //Verificar se todos os campos estão preenchidos
             if(!empty($nome) && !empty($endereco) && !empty($cidade) && !empty($estado) && !empty($telefone) && !empty($email) && !empty($senha))
             {
-                $usuario->conectar("estacio2025 (1)","localhost", "root", "");
+                $usuario->conectar("estacio2025","localhost", "root", "");
                 if($usuario->msgErro == "")
                 {
                     echo "conectou";
@@ -108,8 +97,7 @@
             }
         }
 
-    ?>php
+    ?>
     
 </body>
 </html>
-    

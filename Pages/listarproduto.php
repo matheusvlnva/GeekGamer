@@ -1,7 +1,7 @@
 <?php
-    require_once 'produtos.php';
-    $produtos = new Produto();
-    $produtos->conectar("estacio2025 (1)","localhost","root", "");
+    require '../Classes/produtos.php';
+    $produtos = new Produtos();
+    $produtos->conectar("estacio2025","localhost","root", "");
     $dados = $produtos->listarProdutos();
 ?>
 
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../CSS/Login.css">
 </head>
 <body>
-    <a href="areadelogin.php" class="btn-return">Voltar</a>
+    <a href="areausuario.php" class="btn-return">Voltar</a>
     <div class="log">
     <h2>LISTAR PRODUTOS</h2>
     <table border="1">

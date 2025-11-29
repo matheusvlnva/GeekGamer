@@ -1,8 +1,8 @@
 
 <?php
-    require_once 'usuario.php';
+    require '../Classes/usuario.php';
     $usuario = new Usuario();
-    $usuario->conectar("estacio2025 (1)","localhost","root", "");
+    $usuario->conectar("estacio2025","localhost","root", "");
     $dados = $usuario->listarUsuarios();
 ?>
 
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../CSS/Login.css">
 </head>
 <body>
-    <a href="areadelogin.php" class="btn-return">Voltar</a>
+    <a href="areausuario.php" class="btn-return">Voltar</a>
     <div class="log">
     <h2>LISTAR USUÁRIO</h2>
     <table border="1">

@@ -1,5 +1,5 @@
-<?php
-    require_once 'usuario.php';
+<?php 
+    require '../Classes/usuario.php';
     $usuario = new Usuario();
 ?>
 
@@ -13,16 +13,16 @@
     <title>Tela Login</title>
 </head>
 <body>
-    <a href="home.html" class="btn-return">Voltar</a>
+    <a href="home.php" class="btn-return">Voltar</a>
     <div class="cont-log">
         <div class="log">
-            <h2>LOGIN</h2>
+            <h2>LOGIN</h2><br><br>
             <form method="post">            
                 <label>Usuário:</label><br>
                 <input type="email" name="email" id="" placeholder="Digite seu email."><br><br>           
                 <label>Senha:</label><br>
                 <input type="password" name="senha" id="" placeholder="********"><br><br>           
-            <button type="submit">LOGAR</button>
+            <input type="submit" value="LOGAR"><br>
             <a href="cadastro.php">Cadastre-se!</a>
             </form>  
         </div>
@@ -35,7 +35,7 @@
 
             if(!empty($email) && !empty($senha))
             {
-                $usuario->conectar("estacio2025 (1)","localhost","root", "");
+                $usuario->conectar("estacio2025","localhost","root", "");
                 if($usuario->msgErro =="")
                 {
                     if($usuario->logar($email, $senha))
@@ -74,4 +74,5 @@
     ?>
 
 </body>
-</html
+</html>
+

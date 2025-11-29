@@ -1,5 +1,5 @@
 <?php
-    Class Produtos
+    Class Produto
     {
         private $pdo;
 
@@ -16,12 +16,12 @@
             }
         }
 
-        public function cadastrarproduto($nome, $valor, $quantidade, $codigo, $peso, $estmin, $estmax)
+        public function cadastrarProduto($nome,$valor,$quantidade,$codigo,$peso,$estmin,$estmax)
         {
             global $pdo;
 
-            //verificar se o produto já está cadastrado
-            $produto = $pdo->prepare("SELECT id_produto FROM produtos WHERE nome = :e");
+            //verificar se o usuário já está cadastrado
+            $produto = $pdo->prepare("SELECT id_produto FROM produtos WHERE nome = :n");
             $produto->bindValue(":n", $nome);
             $produto->execute();
             if($produto->rowCount() > 0)
@@ -29,13 +29,12 @@
                 return false;
             }
             else{
-                $produto = $pdo->prepare("INSERT INTO produtos (nome, valor, quantidade, codigo, peso, estmin, estmax)) 
-                VALUES (:n, :vl, :qnt, :sku, :ps, :emin, :emax)");
+                $produto = $pdo->prepare("INSERT INTO produtos (nome, valor, quantidade, codigo, peso,estmin, estmax) VALUES (:n, :vlr, :qnte :sku, :p, :emin, :emax)");
                 $produto->bindValue(":n",$nome);
-                $produto->bindValue(":vl",$valor);
-                $produto->bindValue(":qnt",$quantidade);
+                $produto->bindValue(":vlr",$valor);
+                $produto->bindValue(":qnte",$quantidade);
                 $produto->bindValue(":sku",$codigo);
-                $produto->bindValue(":ps",$peso);
+                $produto->bindValue(":p",$peso);
                 $produto->bindValue(":emin",$estmin);
                 $produto->bindValue(":emax",$estmax);
                 $produto->execute();
