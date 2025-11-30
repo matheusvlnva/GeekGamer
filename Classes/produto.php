@@ -30,6 +30,7 @@
             }
             else{
                 $produto = $pdo->prepare("INSERT INTO produtos (nome, valor, quantidade, codigo, peso,estmin, estmax) VALUES (:n, :vlr, :qnte, :sku, :p, :emin, :emax)");
+
                 $produto->bindValue(":n",$nome);
                 $produto->bindValue(":vlr",$valor);
                 $produto->bindValue(":qnte",$quantidade);
